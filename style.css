@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #222;
+    font-family: system-ui;
+}
+:root {
+    --main-color : #4aff6f;
+    --alt-color : #659364;
+}
+.container {
+    padding: 20px 30px;
+    width: 60%;
+    margin: 40px auto 0;
+    background-color: #333;
+    border-radius: 8px;
+}
+@media (max-width:768px){
+    .container {
+        width: 90%;
+    }
+}
+.container .box {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-radius: 5px;
+}
+.container .box .pc,.me{
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    color: #f0b11b;
+    border-bottom: 1px solid #777;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+.button {
+    padding: 10px;
+    display: flex;
+}
+.button button {
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    background-color: #f0b11b;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+@media (max-width:768px){
+    .button {
+        flex-direction: column;
+    }
+    .button button {
+        width: 70%;
+    }
+}
+.button button:hover {
+
+    background-color: #ffffff55;
+}
+.reslut {
+    text-align: center;
+}
+.reslut h2 {
+    padding: 20px;
+    background-color: var(--alt-color);
+    margin: 10px 0;
+    border-radius: 5px;
+    color: var(--main-color);
+    font-weight: 900;
+    letter-spacing: 1px;
+    animation-name: letter_space;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes letter_space{
+    from {
+        letter-spacing: 1px;
+    }
+    to {
+        letter-spacing: 2px;
+    }
+}
+.agin {
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    color: #fff;
+    font-weight: 900;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+@media (max-width:768px){
+    .agin  {
+        width: 50%;
+    }
+}
+.agin:hover {
+    letter-spacing: 2px;
+}
